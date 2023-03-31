@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <h1 class="head" style="text-align: center; margin-top: 2%;">Task Manager</h1>
+    <div class="task-c container">
+        <% if(locals.user) {%>
+        <div class="task-form">
+            <form action="/tasks/create" method="post">
+                <input type="text" name="title" placeholder="Enter Titlt" id="">
+                <textarea name="task_details" id="" cols="30" placeholder="Task Name" rows="10"></textarea>
+                <input type="submit" id="btn" value="Add">
+            </form>
+        </div>
+        <%} else{%>
+
+            <div class="task-form">
+                <div class="login-msg">
+                    <h1>Please Login to Perform any Actions</h1>
+                    <li class="signin-h"><a href="/users/sign-in">sign-in</a></li>
+                        <li class="signup-h"><a href="/users/sign-up">sign-up</a></li>
+                   
+                </div>
+            </div>
+        <%}%>
+        <div class="task-img ">
+
+        </div>
+
+    </div>
+    <h1 id="mtask" style="text-align: center;">Manage Your Task</h1>
+
+
+    <div class="head-set">
+        <div class=" head-bar">
+            <% if(locals.user) {%>
+            <h1>Your Tasks</h1>
+           
+            <%} else {%>
+                <marquee> <h1>Login to View your Tasks</h1> </marquee>
+            <%}%>
+          
+        </div>
+    </div>
+
+
+
+    <div class="tasklist container">
+        
+        <% for(task of tasks) {%>
+          
+            <% if(locals.user && locals.user.id==task.user._id) {%>
+        
+                <div class="taskbar">
+                    <div class="title">
+                        <h1>
+                            <%= task.title %>
+                            
+                        </h1>
+                    </div>
+                    <div class="desc">
+                        <div class="task-details">
+                            <%= task.description %>
+                            
+                        </div>
+                        <div class="action-btn">
+                            <a href="#" onclick="openEditModal()"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="/tasks/destroy/<%= task._id %>"> <i class="fa-solid fa-trash"></i></a>
+        
+                        </div>
+                    </div>
+                    <div id="editModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeEditModal()">&times;</span>
+                            <form action="/tasks/update/<%= task._id %>" method="post">
+                                <input type="text" name="newtitle" value=" <%= task.title %>" placeholder="New Title">
+                                <textarea name="new_task_details" id="" cols="30"
+                                    rows="10"><%= task.description %></textarea>
+                                <input type="submit" id="btn" value="Edit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        
+                <%}%>
+            <%}%>
+        
+
+       
+
+    </div>
+
+
+
+
+
+
+    <script>
+        function openEditModal() {
+            document.getElementById("editModal").style.display = "block";
+        }
+
+        function closeEditModal() {
+            document.getElementById("editModal").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
