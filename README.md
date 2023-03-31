@@ -4,7 +4,8 @@
 - This is a simple Taskmanager web application that allows users to add, edit, and delete tasks.
 
 ## Hosted Link
-`http://bit.ly/42TdWR8`
+[Click Here](http://bit.ly/42TdWR8)
+
 
 ## How to setup Project 
 ### Clone the latest Repository
