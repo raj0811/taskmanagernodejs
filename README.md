@@ -42,3 +42,27 @@
 
 ![Alt text](https://i.ibb.co/mTX446y/ss1.png "Optional title")
 
+
+## Folder Structure
+
+`
+├── controllers/
+│   ├── taskController.js
+│   └── userController.js
+├── models/
+│   ├── task.js
+│   └── user.js
+├── routes/
+│   ├── taskRoutes.js
+│   └── userRoutes.js
+├── utils/
+│   ├── auth.js
+│   └── error.js
+├── .env.example
+├── .gitignore
+├── app.js
+├── package.json
+├── README.md
+└── server.js
+
+`   
