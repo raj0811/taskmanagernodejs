@@ -1,7 +1,7 @@
 const express = require('express');
 // const cookieParser = require('cookie-parser');
 
-const port = 8000;
+const port = 8004;
 const db=require('./config/mongoose');
 const session = require('express-session');
 const flash = require('connect-flash');
