@@ -46,23 +46,23 @@
 ## Folder Structure
 
 `
-├── controllers/
-│   ├── taskController.js
-│   └── userController.js
-├── models/
-│   ├── task.js
-│   └── user.js
-├── routes/
-│   ├── taskRoutes.js
-│   └── userRoutes.js
-├── utils/
-│   ├── auth.js
-│   └── error.js
-├── .env.example
-├── .gitignore
-├── app.js
-├── package.json
-├── README.md
-└── server.js
+├── controllers/ <br>
+│   ├── taskController.js <br>
+│   └── userController.js <br>
+├── models/ <br>
+│   ├── task.js <br>
+│   └── user.js <br>
+├── routes/ <br>
+│   ├── taskRoutes.js <br>
+│   └── userRoutes.js <br>
+├── utils/ <br>
+│   ├── auth.js <br>
+│   └── error.js <br>
+├── .env.example <br>
+├── .gitignore <br>
+├── app.js <br>
+├── package.json <br>
+├── README.md <br>
+└── server.js <br>
 
 `   
