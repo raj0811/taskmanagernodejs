@@ -8,7 +8,7 @@
 
 ## Video 
 <a href="">
-            <img src="https://cdn-icons-png.flaticon.com/512/400/400425.png" alt="video">
+            <img src="https://cdn-icons-png.flaticon.com/512/400/400425.png" alt="video" height="60px" width="70px">
 </a>
 
 
