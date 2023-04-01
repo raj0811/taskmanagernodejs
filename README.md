@@ -6,6 +6,11 @@
 ## Hosted Link
 [Click Here](http://bit.ly/42TdWR8)
 
+## Video 
+<a href="">
+            <img src="https://cdn-icons-png.flaticon.com/512/400/400425.png" alt="video">
+</a>
+
 
 ## How to setup Project 
 ### Clone the latest Repository

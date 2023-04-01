@@ -7,7 +7,7 @@ module.exports.home= async function(req,res){
        let tasks = await Task.find({}).populate('user').exec();
        
        let users = await User.find({});
-        
+      
         return res.render('home',{
             title: 'Task Manager',
             tasks:tasks

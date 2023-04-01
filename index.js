@@ -3,6 +3,7 @@ const express = require('express');
 
 const port = 8004;
 const db=require('./config/mongoose');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
 const customMware= require('./config/middleware')

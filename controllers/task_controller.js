@@ -7,6 +7,7 @@ module.exports.create = function(req, res) {
     user: req.user._id
   })
   .then(tasks => {
+    req.flash('sucess','Added'); 
     return res.redirect('back');
   })
   .catch(err => {
