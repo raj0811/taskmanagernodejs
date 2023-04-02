@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // mongoose.connect('mongodb://localhost/taskmanager_db')
-mongoose.connect('mongodb+srv://mrunknown0086:GO5dV7jPxrBttQ43@cluster0.txtaext.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(<mongo db connection link here>);
 //accuire the connectiontion
 const db = mongoose.connection;
 
