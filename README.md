@@ -17,6 +17,9 @@
 `git clone https://github.com/raj0811/taskmanagernodejs`
 `cd taskmanagernodejs`
 
+### Add your DB
+- go to config>mongoose.js on line no. 4 put your database link here ``` mongoose.connect(<mongo db connection link here>); ```
+
 ##### Installing NPM dependencies
 
 `npm install`
